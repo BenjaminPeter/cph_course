@@ -69,6 +69,6 @@ fst_mat <- function(data){
 }
 
 
-read_data <- function(fname){
-    as.tibble(fread(fname))
+read_data <- function(fname, ...){
+    as_tibble(fread(fname, ...))
 }
