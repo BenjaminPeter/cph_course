@@ -72,3 +72,20 @@ fst_mat <- function(data){
 read_data <- function(fname, ...){
     as_tibble(fread(fname, ...))
 }
+
+require(gplots)
+fst_plot <- function(df){
+    mat = f2(df, unique_only=F) %>% 
+        select(-se) %>% 
+        pivot_wider(names_from=pop2, values_from = est) %>% 
+        column_to_rownames('pop1') %>% as.matrix
+        heatmap.2(abs(mat), symm=T, trace='n', scale = 'n', cexRow=2, cexCol=2, margins = c(12, 12))
+}
+
+f2_matrix <- function(df){
+    f2_mat = f2(f2s,uni=F) %>%
+        arrange(pop1, pop2) %>% select(-se) %>%
+        pivot_wider(names_from=pop2, values_from=est) %>%
+        column_to_rownames('pop1') %>% as.matrix
+}
+
