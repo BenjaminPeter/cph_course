@@ -13191,7 +13191,7 @@ div#notebook {
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">options</span><span class="p">(</span><span class="n">repr.matrix.max.cols</span><span class="o">=</span><span class="m">10</span><span class="p">,</span> <span class="n">repr.matrix.max.rows</span><span class="o">=</span><span class="m">10</span><span class="p">)</span>
@@ -13199,7 +13199,7 @@ div#notebook {
 <span class="nf">suppressPackageStartupMessages</span><span class="p">({</span>
     <span class="nf">library</span><span class="p">(</span><span class="n">admixtools</span><span class="p">)</span>
     <span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
-    <span class="nf">source</span><span class="p">(</span><span class="s">&quot;scripts/analysis.R&quot;</span><span class="p">)</span>
+    <span class="nf">source</span><span class="p">(</span><span class="s">&quot;/home/ben/fstats_tutorial/scripts/analysis.R&quot;</span><span class="p">)</span>
 <span class="p">})</span>
 </pre></div>
 
@@ -13220,26 +13220,13 @@ div#notebook {
 <li><a href="http://www.genetics.org/content/202/4/1485">Peter (2016)</a></li>
 <li><a href="https://academic.oup.com/bioinformatics/advance-article/doi/10.1093/bioinformatics/btz030/5298728">Petr et al. (2019)</a></li>
 </ul>
-<h1 id="1.--Setting-up">1.  Setting up<a class="anchor-link" href="#1.--Setting-up">&#182;</a></h1><p>To get your own copy of this tutorial, you will need to copy it to your directory by logging into the console and copying it over:</p>
-<div class="highlight"><pre><span></span>cp -r  ~peter/fstats_tutorial/ .
+<h1 id="1.--Setting-up">1.  Setting up<a class="anchor-link" href="#1.--Setting-up">&#182;</a></h1><p>To get your own copy of this tutorial, you can copy it on the server from my folder:</p>
+<div class="highlight"><pre><span></span>cp -r  ~ben/fstats_tutorial/ .
 </pre></div>
-<p>Next, you will need to start R remotely, and load the required packages for the tutorial</p>
+<p>If you work in jupyter, there is no need to do that and you can access it directly from my folder.</p>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">setwd</span><span class="p">(</span><span class="s">&#39;~benjamin_peter/fstats_tutorial&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13251,24 +13238,12 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">#admixtools::extract_f2(&#39;data/world/worldfoci2&#39;, outdir=&#39;fdata/worldfoci2&#39;, blgsize = 0.05)</span>
 <span class="c1">#admixtools::extract_f2(&#39;data/world/ancient&#39;, outdir=&#39;fdata/ancient&#39;, blgsize = 0.05)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1">#admixtools::extract_f2(&#39;data/europe/westeurasian1&#39;, outdir=&#39;fdata/westeurasia1&#39;, blgsize = 0.05)</span>
+<span class="c1">#admixtools::extract_f2(&#39;data/europe/westeurasian1&#39;, outdir=&#39;fdata/westeurasia1&#39;, blgsize = 0.05)</span>
 <span class="c1">#admixtools::extract_f2(&#39;data/europe/westeurasian2&#39;, outdir=&#39;fdata/westeurasia2&#39;, blgsize = 0.05)</span>
 </pre></div>
 
@@ -13289,12 +13264,12 @@ scheme, so throughout we need to keep ascertainment bias in mind.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">list.files</span><span class="p">(</span><span class="s">&quot;data/europe/&quot;</span><span class="p">);</span>
-<span class="nf">list.files</span><span class="p">(</span><span class="s">&quot;data/world/&quot;</span><span class="p">);</span>
-<span class="nf">list.files</span><span class="p">(</span><span class="s">&quot;data/ancient/&quot;</span><span class="p">);</span>
+<div class=" highlight hl-r"><pre><span></span><span class="nf">list.files</span><span class="p">(</span><span class="s">&quot;/home/ben/fstats_tutorial/data/europe/&quot;</span><span class="p">);</span>
+<span class="nf">list.files</span><span class="p">(</span><span class="s">&quot;/home/ben/fstats_tutorial/data/world/&quot;</span><span class="p">);</span>
+<span class="nf">list.files</span><span class="p">(</span><span class="s">&quot;/home/ben/fstats_tutorial/data/ancient/&quot;</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -13367,12 +13342,12 @@ scheme, so throughout we need to keep ascertainment bias in mind.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="n">ind_world</span> <span class="o">&lt;-</span> <span class="n">readr</span><span class="o">::</span><span class="nf">read_table</span><span class="p">(</span><span class="s">&quot;data/world/worldfoci2.ind&quot;</span><span class="p">,</span> <span class="n">col_names</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;ind&quot;</span><span class="p">,</span> <span class="s">&quot;sex&quot;</span><span class="p">,</span> <span class="s">&quot;pop&quot;</span><span class="p">),</span> <span class="n">col_types</span><span class="o">=</span><span class="s">&#39;ccc&#39;</span><span class="p">)</span>
-<span class="n">ind_eu</span> <span class="o">&lt;-</span> <span class="n">readr</span><span class="o">::</span><span class="nf">read_table</span><span class="p">(</span><span class="s">&quot;data/europe//westeurasian1.ind&quot;</span><span class="p">,</span> <span class="n">col_names</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;ind&quot;</span><span class="p">,</span> <span class="s">&quot;sex&quot;</span><span class="p">,</span> <span class="s">&quot;pop&quot;</span><span class="p">),</span> <span class="n">col_types</span><span class="o">=</span><span class="s">&#39;ccc&#39;</span><span class="p">)</span>
-<span class="n">ind_ancient</span> <span class="o">&lt;-</span> <span class="n">readr</span><span class="o">::</span><span class="nf">read_table</span><span class="p">(</span><span class="s">&quot;data/world/ancient.ind&quot;</span><span class="p">,</span> <span class="n">col_names</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;ind&quot;</span><span class="p">,</span> <span class="s">&quot;sex&quot;</span><span class="p">,</span> <span class="s">&quot;pop&quot;</span><span class="p">),</span> <span class="n">col_types</span><span class="o">=</span><span class="s">&#39;ccc&#39;</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">ind_world</span> <span class="o">&lt;-</span> <span class="n">readr</span><span class="o">::</span><span class="nf">read_table</span><span class="p">(</span><span class="s">&quot;/home/ben/fstats_tutorial/data/world/worldfoci2.ind&quot;</span><span class="p">,</span> <span class="n">col_names</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;ind&quot;</span><span class="p">,</span> <span class="s">&quot;sex&quot;</span><span class="p">,</span> <span class="s">&quot;pop&quot;</span><span class="p">),</span> <span class="n">col_types</span><span class="o">=</span><span class="s">&#39;ccc&#39;</span><span class="p">)</span>
+<span class="n">ind_eu</span> <span class="o">&lt;-</span> <span class="n">readr</span><span class="o">::</span><span class="nf">read_table</span><span class="p">(</span><span class="s">&quot;/home/ben/fstats_tutorial/data/europe//westeurasian1.ind&quot;</span><span class="p">,</span> <span class="n">col_names</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;ind&quot;</span><span class="p">,</span> <span class="s">&quot;sex&quot;</span><span class="p">,</span> <span class="s">&quot;pop&quot;</span><span class="p">),</span> <span class="n">col_types</span><span class="o">=</span><span class="s">&#39;ccc&#39;</span><span class="p">)</span>
+<span class="n">ind_ancient</span> <span class="o">&lt;-</span> <span class="n">readr</span><span class="o">::</span><span class="nf">read_table</span><span class="p">(</span><span class="s">&quot;/home/ben/fstats_tutorial/data/world/ancient.ind&quot;</span><span class="p">,</span> <span class="n">col_names</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;ind&quot;</span><span class="p">,</span> <span class="s">&quot;sex&quot;</span><span class="p">,</span> <span class="s">&quot;pop&quot;</span><span class="p">),</span> <span class="n">col_types</span><span class="o">=</span><span class="s">&#39;ccc&#39;</span><span class="p">)</span>
 
 <span class="n">ind_eu</span>
 </pre></div>
@@ -13431,7 +13406,7 @@ scheme, so throughout we need to keep ascertainment bias in mind.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">nrow</span><span class="p">(</span><span class="n">ind_eu</span><span class="p">)</span>
@@ -13484,11 +13459,11 @@ scheme, so throughout we need to keep ascertainment bias in mind.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="n">f2s_eu</span> <span class="o">=</span> <span class="nf">read_f2</span><span class="p">(</span><span class="s">&quot;fdata/westeurasia1&quot;</span><span class="p">)</span> <span class="c1">#load precomputed data</span>
-<span class="n">f2s_world</span> <span class="o">=</span> <span class="nf">read_f2</span><span class="p">(</span><span class="s">&quot;fdata/worldfoci2&quot;</span><span class="p">)</span> <span class="c1">#load precomputed data</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">f2s_eu</span> <span class="o">=</span> <span class="nf">read_f2</span><span class="p">(</span><span class="s">&quot;/home/ben/fstats_tutorial/fdata/westeurasia1&quot;</span><span class="p">)</span> <span class="c1">#load precomputed data</span>
+<span class="n">f2s_world</span> <span class="o">=</span> <span class="nf">read_f2</span><span class="p">(</span><span class="s">&quot;/home/ben/fstats_tutorial/fdata/worldfoci2&quot;</span><span class="p">)</span> <span class="c1">#load precomputed data</span>
 
 <span class="n">pwfst1</span><span class="o">=</span><span class="nf">fst</span><span class="p">(</span><span class="n">f2s_eu</span><span class="p">)</span>
 <span class="n">pwfst2</span><span class="o">=</span><span class="nf">fst</span><span class="p">(</span><span class="n">f2s_world</span><span class="p">)</span>
@@ -13501,7 +13476,7 @@ scheme, so throughout we need to keep ascertainment bias in mind.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">pwfst2</span>
@@ -13561,7 +13536,7 @@ scheme, so throughout we need to keep ascertainment bias in mind.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">fst_plot</span><span class="p">(</span><span class="n">f2s_eu</span><span class="p">)</span>
@@ -17565,7 +17540,7 @@ continents. We'll hypothesize that African Americans (<code>AA</code>) are an ad
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">f3_aa</span> <span class="o">=</span> <span class="nf">f3</span><span class="p">(</span><span class="n">f2s_world</span><span class="p">,</span> <span class="n">pop1</span><span class="o">=</span><span class="s">&#39;AA&#39;</span><span class="p">,</span> <span class="n">pop2</span><span class="o">=</span><span class="s">&#39;Yoruba&#39;</span><span class="p">,</span> <span class="n">pop3</span><span class="o">=</span><span class="nf">unique</span><span class="p">(</span><span class="n">ind_world</span><span class="o">$</span><span class="n">pop</span><span class="p">))</span> <span class="o">%&gt;%</span> <span class="nf">arrange</span><span class="p">(</span><span class="n">est</span><span class="p">)</span>
@@ -17618,7 +17593,7 @@ continents. We'll hypothesize that African Americans (<code>AA</code>) are an ad
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">f3_aa</span> <span class="o">%&gt;%</span> 
@@ -20492,7 +20467,7 @@ height=1320
 <li>Are any $F_3$-statistics negative? </li>
 <li>Are they significant? (|Z| &gt; 3?)?</li>
 <li>Which pairs of populations do these correspond to? </li>
-<li>What could this mean about the population genetic history of the Uygurs?</li>
+<li>What could this mean about the population genetic history of the African Americans?</li>
 </ul>
 
 </div>
@@ -20522,7 +20497,7 @@ height=1320
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">f2s</span><span class="o">=</span> <span class="nf">read_f2</span><span class="p">(</span><span class="s">&#39;fdata/westeurasia2&#39;</span><span class="p">)</span>
@@ -20562,7 +20537,7 @@ height=1320
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">f3_res</span> <span class="o">=</span> <span class="nf">f3</span><span class="p">(</span><span class="n">f2s</span><span class="p">,</span> <span class="n">pop1</span><span class="o">=</span><span class="s">&#39;Mbuti&#39;</span><span class="p">,</span> <span class="n">pop2</span><span class="o">=</span><span class="s">&#39;Unknown&#39;</span><span class="p">,</span> <span class="n">pop3</span><span class="o">=</span><span class="n">pops</span><span class="p">)</span>
@@ -20615,7 +20590,7 @@ height=1320
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">viz_outgroup_f3</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">f3_res</span><span class="p">){</span>
@@ -20637,7 +20612,7 @@ height=1320
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">viz_outgroup_f3</span><span class="p">(</span><span class="n">f3_res</span><span class="o">%&gt;%</span> <span class="nf">filter</span><span class="p">(</span><span class="o">!</span><span class="n">pop3</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Mbuti&quot;</span><span class="p">,</span> <span class="s">&quot;Unknown&quot;</span><span class="p">)))</span>
@@ -23377,23 +23352,21 @@ height=1320
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="5.-f4/D-statistics">5. f4/D-statistics<a class="anchor-link" href="#5.-f4/D-statistics">&#182;</a></h2><p>next, we can test for admixture in the past history of humans by lookin for an excess of ABBA or an excess of BABA sites in a 4-population tree.</p>
-<p>For this purpose, we use the ancient dataset, which contains a subset of the Lazaridis-data with Chimpanzee, Oranguan, Neandertal, Denisovan and a small number of modern Human population samples.</p>
-<p>To calculate D-stats is very similar to calculating $F_3$: instead of <code>admixtools::f3</code> we use <code>admixtools::D</code>:</p>
-<p><strong>Task 2</strong>: Use admixr (or if you really prefer, qpDstat manually) to</p>
+<p>For this purpose, we use the ancient dataset, which contains a subset of the Chimpanzee, three Neandertals and a small number of modern Human population samples.</p>
+<p>To calculate $F_4$-stats is very similar to calculating $F_3$: instead of <code>admixtools::f3</code> we use <code>admixtools::f4</code>:</p>
+<p><strong>Task 3</strong>: Use admixr (or if you really prefer, qpDstat manually) to</p>
 <ul>
-<li>load an eigenstrat object for the <code>ancient</code>-dataset</li>
-<li>read all populations present in that data into memory using the <code>read_ind</code>-function</li>
-<li>calculate all D-statistics of the form $D(MH_1, MH_2, AH, \text{Primate})$ </li>
+<li>calculate all f4-statistics of the form $D(\text{African}, \text{Non-African}, \text{Neandertals}, \text{Primate})$ (the African populations are Mbuti and Yoruba; the Non-Africans are French, Han and Papuan)</li>
 <li>create a figure visualizing your results (you may use the function below)</li>
 </ul>
-<p><strong>Question 3</strong>: Are any of the statistics significant? In what direction? (i.e. is there an excess of ABBA or BABA patterns, relative to what you would expect under a 4-population tree?). Is this consistent with what you might expect?</p>
+<p><strong>Question 3</strong>: Are any of the statistics significant? In what direction? Is this consistent with what you might expect?</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">viz_d</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">d_res</span><span class="p">)</span> 
@@ -23414,10 +23387,10 @@ height=1320
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="n">ancient</span> <span class="o">=</span> <span class="nf">read_f2</span><span class="p">(</span><span class="s">&#39;fdata/ancient&#39;</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">ancient</span> <span class="o">=</span> <span class="nf">read_f2</span><span class="p">(</span><span class="s">&#39;/home/ben/fstats_tutorial/fdata/ancient&#39;</span><span class="p">)</span>
 <span class="n">pops</span> <span class="o">=</span> <span class="nf">dimnames</span><span class="p">(</span><span class="n">ancient</span><span class="p">)</span><span class="n">[1][[1]]</span>
 <span class="n">pops</span>
 </pre></div>
@@ -23454,7 +23427,7 @@ height=1320
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">d_res</span> <span class="o">=</span> <span class="nf">f4</span><span class="p">(</span><span class="n">ancient</span><span class="p">,</span> 
@@ -23511,7 +23484,7 @@ height=1320
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">d_res</span> <span class="o">%&gt;%</span> <span class="n">viz_d</span>
@@ -25127,7 +25100,7 @@ height=1320
  <img src="F4.large.jpg" alt="F4-ratio" style="width: 400px;"/></p>
 <p>and estimate the admixture proportion $\alpha$ as
  $$\alpha = \frac{f_4(A, O; X, C)}{f_4(A, O; B, C)}$$</p>
-<p><strong>Task 3</strong>: Use the <code>qpf4ratio</code>-function in <code>admixtools</code> to use the ancient data (that we used for the $D$-stats exercise to estimate the Neandertal ancestry in French, Han and Papuans.</p>
+<p><strong>Task 4</strong>: Use the <code>qpf4ratio</code>-function in <code>admixtools</code> to use the ancient data (that we used for the $D$-stats exercise to estimate the Neandertal ancestry in French, Han and Papuans.</p>
 <ul>
 <li>have a look at <code>?qpf4ratio</code> to figure out the arguments this function expects</li>
 <li>which population is in which position of the arguments? Construct a vector <code>v</code> or data frame that matches this order</li>
@@ -25140,7 +25113,7 @@ height=1320
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="nf">rbind</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;Altai_Neanderthal.DG&#39;</span><span class="p">,</span> <span class="s">&#39;Primate_Chimp&#39;</span><span class="p">,</span> <span class="s">&#39;French&#39;</span><span class="p">,</span> <span class="s">&#39;Yoruba&#39;</span><span class="p">,</span> <span class="s">&#39;Vindija_Neanderthal.DG&#39;</span><span class="p">),</span>
