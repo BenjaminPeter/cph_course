@@ -74,12 +74,13 @@ read_data <- function(fname, ...){
 }
 
 require(gplots)
-fst_plot <- function(df){
+fst_plot <- function(df, cex.label=1){
     mat = f2(df, unique_only=F) %>% 
         select(-se) %>% 
         pivot_wider(names_from=pop2, values_from = est) %>% 
         column_to_rownames('pop1') %>% as.matrix
-        heatmap.2(abs(mat), symm=T, trace='n', scale = 'n', cexRow=2, cexCol=2, margins = c(12, 12))
+        heatmap.2(abs(mat), symm=T, trace='n', scale = 'n', 
+                  cexRow=cex.label, cexCol=cex.label, margins = c(12, 12))
 }
 
 f2_matrix <- function(df){
